@@ -8,8 +8,8 @@ load_dotenv()
 
 def api_key_required(view_func):
     def wrapper(request, *args, **kwargs):
-        api_key = request.headers.get("DETECTION-API-KEY")
-        if int(api_key) == int(os.getenv("DETECTION-API-KEY")):
+        api_key = request.headers.get("DETECTION_API_KEY")
+        if int(api_key) == int(os.getenv("DETECTION_API_KEY")):
             return view_func(request, *args, **kwargs)
         else:
             return JsonResponse({'error': 'Invalid API key'}, status=401)
