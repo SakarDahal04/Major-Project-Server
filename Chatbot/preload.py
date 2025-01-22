@@ -6,8 +6,6 @@ import os
 import traceback
 from django.conf import settings
 
-os.environ["GROQ_API_KEY"] = "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"
-
 class FAISSLoader:
     db = None
 

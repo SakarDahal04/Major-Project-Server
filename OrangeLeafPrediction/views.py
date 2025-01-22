@@ -76,7 +76,7 @@ def extract_features(image_path):
 @api_key_required
 def check_leaf_api(request):
     if 'image' not in request.FILES:
-        return Response({"error": "No image provided"}, status=400)
+        return Response({"error": "No  image provided"}, status=400)
 
     # Save the uploaded image
     image = request.FILES['image']
