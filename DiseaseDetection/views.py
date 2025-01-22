@@ -59,7 +59,7 @@ def check_disease_api(request):
         os.remove(file_path)  # Delete the file
         print(f"{file_path} has been deleted successfully.")
     else:
-        print(f"{file_path} does not exist.")
+        print(f"{file_path} file does not exist.")
 
     # JSON response in here
     return JsonResponse(final_result)
