@@ -4,11 +4,12 @@ from .settings import BASE_DIR
 
 SECRET_KEY = os.environ(['SECRET'])
 
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]    # This will be the azure url which will only serve the code in this project
+# ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]    # This will be the azure url which will only serve the code in this project
+ALLOWED_HOSTS = ['*']    # This will be the azure url which will only serve the code in this project
 
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']]
 
-DEBUG = False
+DEBUG = True
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
